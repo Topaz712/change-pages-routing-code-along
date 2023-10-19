@@ -30,7 +30,9 @@ export class AuthGuard implements CanActivateFn, CanActivateChildFn {
           }
         );
     }
-    canActivateChild(childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot):
+    canActivateChild(
+      route: ActivatedRouteSnapshot,
+      state: RouterStateSnapshot):
     Observable<boolean> | Promise<boolean> | boolean {
       return this.canActivate(route, state);
     }
